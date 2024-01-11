@@ -1,0 +1,14 @@
+[Unit]
+Description=Simple Nginx Demonstration
+
+[Service]
+ExecStart=/usr/sbin/nginx -g 'daemon on; master_process on;'
+ExecReload=/usr/sbin/nginx -s reload
+ExecStop=/usr/sbin/nginx -s quit
+Restart=always
+User=root
+Group=root
+WorkingDirectory=/etc/nginx
+
+[Install]
+WantedBy=multi-user.target
