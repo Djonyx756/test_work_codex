@@ -1,6 +1,6 @@
 # test_work_codex
-1.\n
-Поместить в /etc/systemd/system/nginx-demo.service\n
-Запустить:\n
-    sudo systemctl enable nginx-demo \n
-    sudo systemctl start nginx-demo\n
+<div>1.</div>
+<div>Поместить в /etc/systemd/system/nginx-demo.service</div>
+<div>Запустить:</div>
+<div>sudo systemctl enable nginx-demon</div>
+<div>sudo systemctl start nginx-demon</div>
