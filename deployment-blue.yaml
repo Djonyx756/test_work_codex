@@ -1,0 +1,22 @@
+# deployment-blue.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-blue
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myapp
+      color: blue
+  template:
+    metadata:
+      labels:
+        app: myapp
+        color: blue
+    spec:
+      containers:
+      - name: myapp
+        image: your-registry/myapp:blue
+        ports:
+        - containerPort: 80

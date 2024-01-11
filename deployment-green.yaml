@@ -1,0 +1,22 @@
+# deployment-green.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-green
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myapp
+      color: green
+  template:
+    metadata:
+      labels:
+        app: myapp
+        color: green
+    spec:
+      containers:
+      - name: myapp
+        image: your-registry/myapp:green
+        ports:
+        - containerPort: 80
